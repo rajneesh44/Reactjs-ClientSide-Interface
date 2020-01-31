@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
-import fire from './config/fire'
+// import './App.css';
+import fire from './config/fire';
+import Login from './Login';
+import Home from './Home';
 
-function App() {
+// function App() {
+class App extends Component{
 
   constructor(props){
     super(props);
@@ -29,13 +32,13 @@ function App() {
       }
     });
   }
-
+render(){
   return (
     <div className="App">
      {this.state.user ? (<Home />) : (<Login/>)}
-
     </div>
   );
+}
 }
 
 export default App;
@@ -43,7 +46,7 @@ export default App;
 
 //part under main divs
 
- {/* <header className="App-header">
+ /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload and yes do one thing.
@@ -56,4 +59,4 @@ export default App;
         >
           Learn React
         </a>
-      </header> */}
+      </header> */
