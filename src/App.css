@@ -44,6 +44,7 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: 'Ubuntu', sans-serif;
+  background-color: #282c34;
 }
 
 .container {
@@ -116,10 +117,11 @@ input[type='submit'] {
   margin-top: 10px;
   margin-bottom: 20px;
   border: none;
-  width: 100%;
+  width: 60%;
   border-radius: 6pt;
-  margin-left: 20;
+  margin-left: 100pt;
   cursor:pointer;
+
 }
 
 .success{
@@ -129,8 +131,9 @@ input[type='submit'] {
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
+  margin-left: 100pt;
   border: none;
-  width: 100%;
+  width: 60%;
   border-radius: 6pt; 
   margin-left: 50;
   cursor:pointer;
@@ -147,4 +150,44 @@ input[type='submit'] {
 h1{
   text-decoration-color: aqua;
   color:aqua;
+  font-size: 25pt;
+  font-style: bold;
+  font-family: Georgia;
+  text-align: center;
+}
+
+.pic{
+  opacity: .70;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+.pic-div{
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+h3{
+  color: aquamarine;
+  font-weight: lighter;
+  opacity: 0.8;
+  margin-top: 100pt;
+  margin-left: 90pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+  color: rosybrown;
+  text-decoration: none;
+}
+
+h5{
+  color: aquamarine;
+  font-weight: lighter;
+  opacity: 0.8;
+  margin-top: 40pt;
+  margin-left: 9pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
