@@ -13,7 +13,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="col-md-6">
+            <div >
                 <h1>You are home</h1>
                 <button onClick={this.logout}>Logout</button>
             </div>

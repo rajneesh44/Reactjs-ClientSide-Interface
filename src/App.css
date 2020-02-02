@@ -1,5 +1,7 @@
-.App {
+/* .App {
   text-align: center;
+  margin-top: 300;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -35,4 +37,114 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login,
+.register {
+  width: 400px;
+}
+
+.login h2,
+.register h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.login a {
+  text-align: center;
+}
+
+input[type='email'] {
+  background-color: #e6e6e6;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 85%;
+  padding: 20px 30px;
+  border-radius: 6pt;
+}
+
+input[type='password'] {
+  background-color: #e6e6e6;
+  padding: 20px 30px;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 85%;
+  border-radius: 6pt;
+}
+
+input[type='submit'] {
+  padding: 15px 0px;
+  background-color: #827ffe;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  width: 100%;
+  border-radius: 6pt;
+}
+
+.check {
+  font-size: 16px;
+}
+
+.primary{
+  padding: 15px 0px;
+  background-color: #827ffe;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  width: 100%;
+  border-radius: 6pt;
+  margin-left: 20;
+  cursor:pointer;
+}
+
+.success{
+  padding: 15px 0px;
+  background-color: #827ffe;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  width: 100%;
+  border-radius: 6pt; 
+  margin-left: 50;
+  cursor:pointer;
+}
+
+
+.primary:hover{
+  background-color:blueviolet;
+  }
+  .success:hover{
+  background-color:blueviolet;
+  }
+
+h1{
+  text-decoration-color: aqua;
+  color:aqua;
 }

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import fire from './config/fire';
 import Login from './Login';
 import Home from './Home';
 
-// function App() {
 class App extends Component{
 
   constructor(props){
@@ -34,7 +33,7 @@ class App extends Component{
   }
 render(){
   return (
-    <div className="App">
+    <div className="container" style={{backgroundColor: '#282c34'}}>
      {this.state.user ? (<Home />) : (<Login/>)}
     </div>
   );
@@ -43,20 +42,23 @@ render(){
 
 export default App;
 
+  
 
-//part under main divs
+// import React, { Component } from 'react';
+// import { Route } from 'react-router-dom';
+// import Login from './Login';
+// // import Register from '.S';
+// // import './App.css';
 
- /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload and yes do one thing.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="container">
+//         <Route exact path="/" component={Login} />
+//         {/* <Route path="/register" component={Register} /> */}
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
