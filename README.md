@@ -7,3 +7,22 @@ Developing the front-end for Backend API
 ```
 Firebase
 ```
+### Build Setup
+
+```
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn run dev
+
+# build for production and launch server
+$ yarn run build
+$ yarn start
+
+# generate static project
+$ yarn run generate
+
+```
+
+> For detailed information and documentation, checkout [ReactJS](https://reactjs.org). 
