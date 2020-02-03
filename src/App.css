@@ -45,6 +45,7 @@ body {
   margin: 0px;
   font-family: 'Ubuntu', sans-serif;
   background-color: #282c34;
+
 }
 
 .container {
@@ -148,8 +149,8 @@ input[type='submit'] {
   }
 
 h1{
-  text-decoration-color: aqua;
-  color:aqua;
+  /* text-decoration-color: aqua;
+  color:aqua; */
   font-size: 25pt;
   font-style: bold;
   font-family: Georgia;
@@ -190,4 +191,15 @@ h5{
   margin-left: 9pt;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+
+.blinking{
+  animation:colorchange 4s infinite alternate;
+}
+@keyframes colorchange{
+  0%{     color:aquamarine;    }
+  49%{    color: rosybrown; }
+  60%{    color: lightseagreen; }
+  99%{    color:coral;  }
+  100%{   color:aquamarine;    }
 }
