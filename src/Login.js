@@ -14,8 +14,23 @@ class Login extends Component {
         this.state={
             email:' ',
             password:' ',
+            color:'blue',
         }
-  
+    }
+
+    handleChangeColor=(newColor)=>{
+        this.setState({
+            color:newColor
+        })
+
+       
+    }
+    // componentDidMount(){
+    //     this.timer=setTimeout(
+    //         ()=> this.handleChangeColor('red'),1000*3 )
+    // }
+    componentWillUnmount(){
+        clearTimeout(this.timer)
     }
 
     login(e){
@@ -38,18 +53,19 @@ class Login extends Component {
     }
 
     componentDidMount() {
+        this.timer=setTimeout(
+        ()=> this.handleChangeColor('red'),1000*1)
+
           window.gapi.signin2.render(
             GOOGLE_BUTTON_ID,
             {
               width: 130,
               height: 50,
-            //   onsuccess: this.login,
+              onsuccess: this.login,
               theme:'dark',
             },
           );
         }
-      
-      
 
     render(){
         return(
@@ -60,7 +76,8 @@ class Login extends Component {
                 </div>
                 <form>
                     <div class= "form-group">
-                        <h1>AMS-ZHCET</h1>
+                        {/* <h1 style={{color:this.state.color}}>AMS-ZHCET</h1> */}
+                        <h1 class = "blinking">AMS-ZHCET</h1>
                         {/* <label for="exampleInputEmail"> Email address</label> */}
                         <input value ={this.state.email} onChange={this.handleChange} type="email" name="email"
                         class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
@@ -76,9 +93,9 @@ class Login extends Component {
                     </div>
                     <button type = "submit" onClick={this.login} class= "primary">Login</button>
                     <button onClick={this.signup} class="success">SignUp</button>  
-                    
+                    <h5>Or signIn using</h5> <div id={GOOGLE_BUTTON_ID} />
                     {/* adding google sign in button */}
-                    <div id={GOOGLE_BUTTON_ID} data-onsuccess= {this.login} />
+                   
                     
                 </form>
                 <h3>Developed by: <a href="https://github.com/rajneesh44">Rajneesh Sharma</a> | <a href="https://github.com/Bhanups123">Bhanu Pratap Singh</a></h3>
