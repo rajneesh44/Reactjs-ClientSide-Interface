@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/css/main.40c99121.chunk.css",
+    "main.js": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/main.f2179d2a.chunk.js",
+    "main.js.map": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/main.f2179d2a.chunk.js.map",
+    "runtime-main.js": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/runtime-main.7bd011ac.js",
+    "runtime-main.js.map": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/runtime-main.7bd011ac.js.map",
+    "static/js/2.667a6975.chunk.js": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/2.667a6975.chunk.js",
+    "static/js/2.667a6975.chunk.js.map": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/2.667a6975.chunk.js.map",
+    "index.html": "rajneesh44.github.io/Reactjs-ClientSide-Interface/index.html",
+    "precache-manifest.4762229284285ee8c751f1c79df78e3f.js": "rajneesh44.github.io/Reactjs-ClientSide-Interface/precache-manifest.4762229284285ee8c751f1c79df78e3f.js",
+    "service-worker.js": "rajneesh44.github.io/Reactjs-ClientSide-Interface/service-worker.js",
+    "static/css/main.40c99121.chunk.css.map": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/css/main.40c99121.chunk.css.map",
+    "static/js/2.667a6975.chunk.js.LICENSE": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/js/2.667a6975.chunk.js.LICENSE",
+    "static/media/zh.jpg": "rajneesh44.github.io/Reactjs-ClientSide-Interface/static/media/zh.e7237bd3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7bd011ac.js",
+    "static/js/2.667a6975.chunk.js",
+    "static/css/main.40c99121.chunk.css",
+    "static/js/main.f2179d2a.chunk.js"
+  ]
+}
