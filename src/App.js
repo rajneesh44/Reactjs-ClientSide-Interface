@@ -5,8 +5,7 @@ import fire from './config/fire';
 import Login from './Login';
 import Home from './Home';
 
-class App extends Component{
-
+class App extends React.Component{
   constructor(props){
     super(props);
     this.state= {
@@ -41,24 +40,3 @@ render(){
 }
 
 export default App;
-
-  
-
-// import React, { Component } from 'react';
-// import { Route } from 'react-router-dom';
-// import Login from './Login';
-// // import Register from '.S';
-// // import './App.css';
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="container">
-//         <Route exact path="/" component={Login} />
-//         {/* <Route path="/register" component={Register} /> */}
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;

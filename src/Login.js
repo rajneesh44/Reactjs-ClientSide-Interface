@@ -25,10 +25,7 @@ class Login extends Component {
 
        
     }
-    // componentDidMount(){
-    //     this.timer=setTimeout(
-    //         ()=> this.handleChangeColor('red'),1000*3 )
-    // }
+
     componentWillUnmount(){
         clearTimeout(this.timer)
     }
