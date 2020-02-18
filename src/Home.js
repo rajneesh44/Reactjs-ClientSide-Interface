@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from './config/fire';
 import Camera from 'react-camera';
+import axios from 'axios';
 
 class Home extends Component {
     constructor(props) {
@@ -15,12 +16,13 @@ class Home extends Component {
             this.img.src = URL.createObjectURL(blob);
             this.img.onload = () => {URL.revokeObjectURL(this.src);}
         })
+        console.log(this.img);
     }
 
     logout() {
         fire.auth().signOut();
     }
-
+    
     render() {
                
         return (
@@ -31,8 +33,8 @@ class Home extends Component {
           style={style.preview}
           ref={(cam) => {
             this.camera = cam;
-          }}
-        >
+          }}>
+          
           <div style={style.captureContainer} onClick={this.takePicture}>
             <div style={style.captureButton} />
           </div>
@@ -43,7 +45,8 @@ class Home extends Component {
             this.img = img;
           }}
         />
-            <button onClick={this.logout.bind(this)}>click</button>
+   
+            <button class ="primary" onClick={this.logout.bind(this) }>click</button>
                
             </div>
             );

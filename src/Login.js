@@ -3,6 +3,7 @@ import { Link, BrowserRouter} from 'react-router-dom';
 import fire from './config/fire';
 import Signup from './Signup';
 import zh from './assets/zh.jpg';
+import SecondPage from './SecondPage';
 
 const GOOGLE_BUTTON_ID = 'google-sign-in-button';
 class Login extends Component {
@@ -21,9 +22,7 @@ class Login extends Component {
     handleChangeColor=(newColor)=>{
         this.setState({
             color:newColor
-        })
-
-       
+        }) 
     }
 
     componentWillUnmount(){
