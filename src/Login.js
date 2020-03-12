@@ -67,7 +67,7 @@ class Login extends Component {
     render(){
         return(
 
-           <div class="container"> 
+           <div> 
                <div class = "pic-div"> 
                <img src={zh} class="pic" alt="zhcet-logo" />   
                 </div>

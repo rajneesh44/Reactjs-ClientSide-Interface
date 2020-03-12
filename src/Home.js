@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import fire from './config/fire';
 import Camera from 'react-camera';
 
-
 class Home extends Component {
     constructor(props) {
         super(props);
