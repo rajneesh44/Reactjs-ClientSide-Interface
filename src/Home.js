@@ -3,6 +3,7 @@ import fire from './config/fire';
 import Camera from 'react-camera';
 import axios from 'axios';
 
+
 class Home extends Component {
     constructor(props) {
         super(props);
