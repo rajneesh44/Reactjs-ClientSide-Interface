@@ -4,9 +4,6 @@ import './App.css';
 import fire from './config/fire';
 import Login from './Login';
 import Home from './Home';
-import SecondPage from './SecondPage';
-import { Link, BrowserRouter, Route } from 'react-router-dom';
-import { Redirect } from 'react-router';
 
 class App extends React.Component{
   constructor(props){
@@ -33,19 +30,10 @@ class App extends React.Component{
       }
     });
   }
-  
-  //<div className="container" style={{backgroundColor: '#282c34'}}>
-  
-//</div>
 render(){
   return (
-    <div>
-    <BrowserRouter>
-        <Route exact path = "/" component={Login} />  
-        <Route exact path = "/SecondPage" component={SecondPage} />  
-        <Route exact path = "/Home" component={Home} />  
-        {this.state.user ? (<Redirect to='/SecondPage'/>): (<Redirect to='/'/>)}
-    </BrowserRouter>
+    <div className="container" style={{backgroundColor: '#282c34'}}>
+     {this.state.user ? (<Home />) : (<Login/>)}
     </div>
   );
 }
