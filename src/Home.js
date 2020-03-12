@@ -3,6 +3,7 @@ import fire from './config/fire';
 import Camera from 'react-camera';
 
 class Home extends Component {
+  
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
@@ -25,8 +26,13 @@ class Home extends Component {
                
         return (
             <div >
-                <h1 style={{color:'white'}}>You are home</h1>
-               
+              <div>
+                <h1 class = "blinking">Attendance Page</h1>
+                <button type = "submit" class= "primary1">Mark attendance</button>
+                <button type = "submit" class= "primary1">Create User/Registration</button>
+                <button type = "submit" class= "primary1">View Attendance</button>
+                <button type = "submit" class= "primary1" style={{marginleft:300}} onClick={this.logout.bind(this)}>Logout</button>
+               </div>
         <Camera
           style={style.preview}
           ref={(cam) => {
@@ -43,7 +49,7 @@ class Home extends Component {
             this.img = img;
           }}
         />
-            <button onClick={this.logout.bind(this)}>click</button>
+            <button type="submit" class = "primary" onClick={this.logout.bind(this)}>Send</button>
                
             </div>
             );
@@ -63,15 +69,16 @@ const style = {
       justifyContent: 'center',
       zIndex: 1,
       bottom: 0,
-      width: '100%'
+      width: '80%',
+      borderRadius: '20%'
     },
     captureButton: {
-      backgroundColor: '#fff',
+      backgroundColor: 'white',
       borderRadius: '50%',
       height: 56,
       width: 56,
       color: '#000',
-      margin: 20
+      margin: 70,
     },
     captureImage: {
       width: '100%',
