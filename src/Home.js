@@ -3,11 +3,14 @@ import fire from './config/fire';
 import Camera from 'react-camera';
 
 class Home extends Component {
-  
+  enableCamera=() =>this.setState({CameraEnabled:true})
+
+  disbleCamera=() =>this.setState({CameraEnabled:false})
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
         this.takePicture = this.takePicture.bind(this);  
+        this.state ={CameraEnabled: false}
     }
 
     takePicture(){
@@ -28,12 +31,16 @@ class Home extends Component {
             <div >
               <div>
                 <h1 class = "blinking">Attendance Page</h1>
-                <button type = "submit" class= "primary1">Mark attendance</button>
+               
                 <button type = "submit" class= "primary1">Create User/Registration</button>
                 <button type = "submit" class= "primary1">View Attendance</button>
                 <button type = "submit" class= "primary1" style={{marginleft:300}} onClick={this.logout.bind(this)}>Logout</button>
+                <button type = "submit" class= "primary1" onClick={this.disableCamera}>disableCamera</button>)
                </div>
-        <Camera
+          <div>
+            {this.state.CameraEnabled ?
+              
+       ( <Camera
           style={style.preview}
           ref={(cam) => {
             this.camera = cam;
@@ -42,7 +49,8 @@ class Home extends Component {
           <div style={style.captureContainer} onClick={this.takePicture}>
             <div style={style.captureButton} />
           </div>
-        </Camera>
+        </Camera>) : ( <button type = "submit" class= "primary1" onClick={this.enableCamera}>Mark attendance</button>)}
+       </div>
         <img
           style={style.captureImage}
           ref={(img) => {
