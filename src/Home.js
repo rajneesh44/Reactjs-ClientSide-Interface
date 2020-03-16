@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 import fire from './config/fire';
 import Camera from 'react-camera';
+import axios from 'axios';
 
 class Home extends Component {
   enableCamera=() =>this.setState({CameraEnabled:true})
 
-  disbleCamera=() =>this.setState({CameraEnabled:false})
+
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
         this.takePicture = this.takePicture.bind(this);  
         this.state ={CameraEnabled: false}
+    }
+    // state={
+    //   selectedFile:null
+    // }
+    // fileSelectedHandler = event=>{
+    //   this.setState({
+    //     selectedFile:event.target.files[0]
+    //   })
+    // }
+
+    fileUploadHandler=(img)=>{
+      const fd = new FormData();
+      console.log("hey",img)
+      fd.append('image',img)
+      axios.post(' https://cors-anywhere.herokuapp.com/http://127.0.0.1:5000/file/',fd)
+      .then(res=>{
+        console.log(res)
+      })
     }
 
     takePicture(){
@@ -38,8 +57,8 @@ class Home extends Component {
                 <button type = "submit" class= "primary1" onClick={this.disableCamera}>disableCamera</button>)
                </div>
           <div>
-            {this.state.CameraEnabled ?
-              
+            
+            {this.state.CameraEnabled ?  
        ( <Camera
           style={style.preview}
           ref={(cam) => {
@@ -55,9 +74,12 @@ class Home extends Component {
           style={style.captureImage}
           ref={(img) => {
             this.img = img;
+            console.image(img)
           }}
         />
-            <button type="submit" class = "primary" onClick={this.logout.bind(this)}>Send</button>
+
+
+            <button type="submit" class = "primary" onClick={this.fileUploadHandler(this.img)}>Send</button>
                
             </div>
             );
